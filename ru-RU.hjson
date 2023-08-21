@@ -47,13 +47,15 @@ Mods: {
 					LikeNPC_Princess: "{NPCName} всегда поддерживает меня в моих усилиях."
 					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_HelpfulNPCs/EnvironmentalistNPC}"
 				}
+
+				Census.SpawnCondition: Имейте {$Items.DazzlingFlower.DisplayName} [i:HelpfulNPCs/DazzlingFlower] в вашем инвенторе
 			}
 
 			FishermanNPC: {
 				DisplayName: Рыболов
 
 				TownNPCMood: {
-					Content: *Храп*
+					Content: *Храпит*
 					NoHome: Мне нужно место для рыбной ловли!
 					LoveSpace: Мне нравится здесь. Тут только я и моя удочка.
 					FarFromHome: Мне нужно вернуться к рыбной ловле.
@@ -67,6 +69,8 @@ Mods: {
 					LikeNPC_Princess: Я не против того, чтобы {NPCName} была рядом, пока я ловлю рыбу.
 					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_HelpfulNPCs/FishermanNPC}"
 				}
+
+				Census.SpawnCondition: Имейте {$Items.RadiantFish.DisplayName} [i:HelpfulNPCs/RadiantFish] в вашем инвенторе
 			}
 
 			HunterNPC: {
@@ -81,12 +85,14 @@ Mods: {
 					HateCrowded: Люди все время опрокидывают мои вещи!
 					LikeBiome: Мне нравится холод в {BiomeName}.
 					DislikeBiome: У меня нет снаряжения для {BiomeName}.
-					LikeNPC: "Яд {NPCName} очень полезен."
-					LoveNPC: "Мы с {NPCName} давно знакомы".
+					LikeNPC: Яд {NPCName} очень полезен.
+					LoveNPC: Мы с {NPCName} давно знакомы.
 					DislikeNPC: "{NPCName} слишком громкий."
-					LikeNPC_Princess: "{NPCName} всегда знает, когда мне нужно дать свободное пространство, чтобы я мог сосредоточиться".
+					LikeNPC_Princess: "{NPCName} всегда знает, когда мне нужно дать свободное пространство, чтобы я мог сосредоточиться."
 					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_HelpfulNPCs/HunterNPC}"
 				}
+
+				Census.SpawnCondition: Имейте {$Items.GlisteningGel.DisplayName} [i:HelpfulNPCs/GlisteningGel] в вашем инвенторе
 			}
 
 			MinerNPC: {
@@ -104,42 +110,60 @@ Mods: {
 					LikeNPC: "{NPCName} немного странный, но он сделал для меня полезные гаджеты."
 					LoveNPC: "{NPCName} и я прекрасно проводим время вместе!"
 					DislikeNPC: "{NPCName} постоянно пытается подравнять мою бороду."
-					LikeNPC_Princess: "{NPCName} помогает мне привести себя в порядок после долгой работы в шахте".
+					LikeNPC_Princess: "{NPCName} помогает мне привести себя в порядок после долгой работы в шахте."
 					Princess_LovesNPC: "{$TownNPCMood_Princess.LoveNPC_HelpfulNPCs/MinerNPC}"
 				}
+
+				Census.SpawnCondition: Имейте {$Items.GlimmeringStone.DisplayName} [i:HelpfulNPCs/GlimmeringStone] в вашем инвенторе
 			}
 
 			Chester.DisplayName: Честер
 		}
 
-		Configs: {
-			Config: {
-				DisplayName: Конфигурация
+		Bestiary: {
+			EnvironmentalistNPC: Эколог любит природу. Он продает растения и животных для сохранения. Ты же не сделаешь с ними ничего плохого, верно?
+			FishermanNPC: Рыболов любит ловить рыбу весь день. Его связь с Рыбаком неизвестна.
+			HunterNPC: Охотник вселяет страх в сердца всех монстров. И да, родители назвали его Хантером.
+			MinerNPC: Шахтер проводит большую часть своего времени глубоко под землей. По какой-то причине ему действительно нравится заниматься майнингом.
+		}
 
-				MinerCanSpawn: {
-					Label: Шахтёр может появиться
-					Tooltip: ""
-				}
+		Dialogue: {
+			EnvironmentalistNPC: {
+				StandardDialogue1: Эй! Не наступай на мои растения!
+				StandardDialogue2: Волшебных бобовых стеблей не существует.
+				StandardDialogue3: Мое исследование террарианских тварей почти завершено.
+				StandardDialogue4: Выращивание растений требует упорного труда и самоотверженности.
+				ChatOption1: Растения
+				ChatOption2: Животные
+			}
 
-				FishermanCanSpawn: {
-					Label: Рыболов может появиться
-					Tooltip: ""
-				}
+			FishermanNPC: {
+				StandardDialogue1: Дайте человеку рыбу, и вы накормите его на целый день. Научите человека ловить рыбу, и вы накормите его на всю жизнь.
+				StandardDialogue2: *Храп*
+				StandardDialogue3: Почему я иногда вылавливаю мусор? Кто вообще бросает вещи в воду?
+				StandardDialogue4: В мое время даже в деревянных ящиках был титан!
+				ChatOption1: Рыба
+				ChatOption2: Наживка
+			}
 
-				HunterCanSpawn: {
-					Label: Охотник может появиться
-					Tooltip: ""
-				}
+			HunterNPC: {
+				StandardDialogue1: Тихо, мне нужно сосредоточиться.
+				StandardDialogue2: ...
+				StandardDialogue3: Да, я Хантер-Охотник.
+				StandardDialogue4: Ты должен быть рад, что я не охочусь за тобой.
+				ChatOption1: Вещи с монстров
+				ChatOption2: Души/Эссенции
+				ChatOption3: Боеприпасы
+				ChatOption4: Сменить магазин
+			}
 
-				EnvironmentalistCanSpawn: {
-					Label: Эколог может появиться
-					Tooltip: ""
-				}
-
-				ChesterCanSpawn: {
-					Label: Честер может появиться
-					Tooltip: ""
-				}
+			MinerNPC: {
+				StandardDialogue1: Нет ничего лучше хорошего пива после возвращения на поверхность!
+				StandardDialogue2: Мне не нужны эти блестящие камушки и всякая руда. Что? Ты хочешь купить их у меня?
+				StandardDialogue3: Что ты имеешь в виду, говоря, что я должен майнить на 11-м уровне?
+				StandardDialogue4: Бриллианты? Я конечно не эксперт, но я не думаю, что из них можно сделать меч.
+				ChatOption1: Ценности
+				ChatOption2: Блоки
 			}
 		}
 
@@ -153,40 +177,30 @@ TownNPCMood_Princess: {
 	LoveNPC_HelpfulNPCs/HunterNPC: "{NPCName} делает все возможное, чтобы защитить всех от монстров!"
 	LoveNPC_HelpfulNPCs/MinerNPC: "{NPCName} упорно трудится, чтобы добыть ресурсы для всех!"
 }
-		Ernest: Эрнест
-		Thomas: Томас
-		Michael: Майкл
-		Curt: Курт
-		Fish: Рыба
-		Bait: Наживка
-		Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime.: Дайте человеку рыбу, и вы накормите его на целый день. Научите человека ловить рыбу, и вы накормите его на всю жизнь.
-		*Snore*: Храп
-		How come sometimes I fish up junk? Who's been throwing things in the water?: Почему я иногда вылавливаю мусор? Кто вообще бросает вещи в воду?
-		Hunter: Охотник
-		Monster Drops: Вещи с монстров
-		Souls/Essences: Души/Эссенции
-		Ammunition: Боеприпасы
-		Change Shop: Сменить магазин
-		Quiet, I need to focus.: Тихо, мне нужно сосредоточиться.
-		I have slain many monsters.: Я убил много монстров.
-		Yes, I am Hunter the Hunter.: Да, я Хантер-Охотник.
-		You should be glad that I'm not hunting you.: Ты должен быть рад, что я не охочусь за тобой.
-		Gold: Голден
-		John: Джон
-		Edward: Эдвард
-		Thomas: Томас
-		Bars & More: Слитки и другое
-		Gems: Другоценные камни
-		I love being down in the mines.: Мне нравится работать в шахтах.
-		I have no use for these shiny gems and ore, want to buy them off me?: Мне не нужны эти блестящие драгоценные камни и руда, хочешь купить их у меня?
-		What do you mean I should mine at Y level 11?: Что вы имеете в виду, говоря, что я должен майнить на 11-м уровне?
-		Gregor: Грегор
-		Mendal: Мендаль
-		Theophrastus: Теофраст
-		Hooke: Гук
-		Plants: Растения
-		Critters: Животные
-		Hey! Don't step on my plants!: Эй! Не наступай на мои растения!
-		There's no such thing as magic beanstalks.: Волшебных бобовых стеблей не существует.
-		My research on Terrarian critters is almost complete.: Волшебных бобовых стеблей не существует.
-		Growing plants takes hardwork and dedication.: Выращивание растений требует упорного труда и самоотверженности.
+
+		// NPCName
+		//
+		// Environmentalist {
+		// Gregor: Грегор
+		// Mendal: Мендаль
+		// Theophrastus: Теофраст
+		// Hooke: Гук
+		// }
+		// 
+		// Fisherman {
+		// Ernest: Эрнест
+		// Thomas: Томас
+		// Michael: Майкл
+		// Curt: Курт
+		// }
+		//
+		// Hunter {
+		// Hunter: Охотник
+		// }
+		// 
+		// Miner {
+		// Gold: Голден
+		// John: Джон
+		// Edward: Эдвард
+		// Thomas: Томас
+		// }
